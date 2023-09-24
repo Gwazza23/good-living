@@ -16,6 +16,7 @@ nav {
   color: var(--dark-grey);
   text-transform: uppercase;
   text-shadow: 1px 1px 2px 1px;
+  font-size: 2rem;
 }
 .nav-logo-container span {
   color: var(--primary);

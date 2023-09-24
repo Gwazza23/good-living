@@ -2,5 +2,9 @@
 
 }
 .home-section-one {
-    margin: 5vh 0vw;
+    height: 90dvh;
+    display: flex;
+    align-items: center;
+}
+.home-section-two {
 }

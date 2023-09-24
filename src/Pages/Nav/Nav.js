@@ -14,7 +14,7 @@ function Nav() {
           </NavLink>
         </div>
         <div className="nav-links">
-          <NavLink to={"/categories"}>Categories</NavLink>
+          <NavLink to={"/products"}>Products</NavLink>
           <button>
             <BsCart3 />
           </button>
