@@ -1,10 +1,9 @@
-.home-container{
-
-}
 .home-section-one {
     height: 90dvh;
     display: flex;
     align-items: center;
 }
-.home-section-two {
+
+.home-section-two, .home-section-three {
+    margin: 10vh auto;
 }

@@ -1,5 +1,6 @@
 import SectionOne from "./Components/SectionOne";
 import SectionThree from "./Components/SectionThree";
+import SectionTwo from "./Components/SectionTwo";
 import "./Home.css";
 
 function Home() {
@@ -8,7 +9,10 @@ function Home() {
       <div className="home-section-one">
         <SectionOne />
       </div>
-      <div className="home-section-two">
+      <div className="home-section-two" >
+        <SectionTwo />
+      </div>
+      <div className="home-section-three">
         <SectionThree />
       </div>
     </div>
