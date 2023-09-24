@@ -1,8 +1,13 @@
-import React from 'react'
+import SectionOne from './Components/SectionOne'
+import './Home.css'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='home-container' >
+      <div className='home-section-one' >
+        <SectionOne />
+      </div>
+    </div>
   )
 }
 

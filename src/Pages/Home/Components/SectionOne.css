@@ -1,0 +1,107 @@
+.section-one-container {
+  width: 85vw;
+  margin: 0px auto;
+  display: grid;
+  grid:
+    "a1 a1 a2 a2" 1.5fr
+    "a1 a1 a2 a2" 1.5fr
+    "a1 a1 a3 a4" 1.5fr
+    "a5 a6 a3 a4" 1.5fr
+    "a5 a6 a3 a4" 1.5fr
+    / 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.section-area {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+}
+.section-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.section-area p {
+  position: relative;
+  color: var(--background);
+  font-size: 2.3rem;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.section-area:hover::before {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.a1 {
+  height: 40vh;
+  grid-area: a1;
+  background-image: url(../../../../public/media/furniture.jpg);
+}
+
+.a2 {
+  grid-area: a2;
+  background-image: url(../../../../public/media/kitchen.jpg);
+}
+.a3 {
+  grid-area: a3;
+  background-image: url(../../../../public/media/bedroom.jpg);
+}
+.a4 {
+  grid-area: a4;
+  background-image: url(../../../../public/media/garden.jpg);
+}
+.a5 {
+  grid-area: a5;
+  background-image: url(../../../../public/media/appliance.jpg);
+}
+.a6 {
+  grid-area: a6;
+  background-image: url(../../../../public/media/cleaning.jpg);
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-area p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-one-container {
+    grid:
+      "a1 a2" 1.5fr
+      "a1 a3" 1.5fr
+      "a4 a5" 1.5fr
+      "a6 a6" 1.5fr
+      / 1fr 1fr;
+  }
+  .section-area p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .section-one-container {
+    grid:
+      "a1 a2" 1fr
+      "a3 a4" 1fr
+      "a5 a6" 1fr
+      / 1fr 1fr;
+  }
+  .a1 {
+    height: 25vh;
+  }
+  .section-area p {
+    font-size: 1.2rem;
+  }
+}
