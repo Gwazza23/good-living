@@ -24,11 +24,13 @@ export const popularItems = [
 export const items = [
   {
     id: 1,
-    category: "All",
+    name: "All",
+    link: "all"
   },
   {
     id: 2,
-    category: "Home Décor",
+    name: "Home Décor",
+    link: "home-decor",
     items: [
       {
         id: 1,
@@ -70,22 +72,27 @@ export const items = [
   },
   {
     id: 3,
-    category: "Kitchen & Dining",
+    name: "Kitchen & Dining",
+    link: "kitchen-and-dining",
   },
   {
     id: 4,
-    category: "Bedroom & Bathroom",
+    name: "Bedroom & Bathroom",
+    link: "bedroom-and-bathroom",
   },
   {
     id: 5,
-    category: "Appliances",
+    name: "Appliances",
+    link: "appliances",
   },
   {
     id: 6,
-    category: "Cleaning & Organization",
+    name: "Cleaning & Organization",
+    link: "cleaning-and-organization",
   },
   {
     id: 7,
-    category: "Outdoor & Garden",
+    name: "Outdoor & Garden",
+    link: "outdoor-and-garden",
   },
 ];

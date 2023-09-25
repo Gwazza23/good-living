@@ -1,27 +1,29 @@
 import { useState } from "react";
 import "./Header.css";
+import { Link, Outlet } from "react-router-dom";
+import { items } from "../../../Util/Items";
 
-function Header({ items, setProducts }) {
-  const [title, setTitle] = useState("All");
+function Header() {
+  const [name, setName] = useState("All");
   return (
-    <div className="header-container">
-      <h2>{title}</h2>
-      <ul>
-        {items.map((category) => {
-          return (
-            <li
-              key={category.id}
-              onClick={() => {
-                setTitle(category.category);
-                setProducts(category);
-              }}
-            >
-              <p>{category.category}</p>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      <div className="header-container">
+        <h2>{name}</h2>
+        <ul>
+          {items.map((category) => {
+            return (
+              <Link
+                onClick={() => setName(category.name)}
+                to={`/products/${category.link}`}
+              >
+                <li>{category.name}</li>
+              </Link>
+            );
+          })}
+        </ul>
+      </div>
+      <Outlet />
+    </>
   );
 }
 
