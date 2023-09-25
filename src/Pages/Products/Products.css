@@ -1,2 +1,5 @@
 .products-container {
+    border: 1px solid black;
+    width: 85vw;
+    margin: 15px auto;
 }

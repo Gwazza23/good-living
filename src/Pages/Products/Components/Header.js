@@ -5,8 +5,8 @@ import { items } from "../../../Util/Items";
 
 function Header() {
   const { category } = useParams();
-  const categoryName = items.find((item) => item.link === category)
-  const [name, setName] = useState(categoryName.name);
+  const productCategory = items.find((item) => item.link === category);
+  const [name, setName] = useState(productCategory.name);
   return (
     <>
       <div className="header-container">
