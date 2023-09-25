@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Roboto:wght@300;400;500&display=swap");
 
 :root {
   --primary: #e85a4f;
@@ -21,11 +21,14 @@ body {
 h4,
 a,
 p,
-button {
+button,
+li {
   font-family: "Roboto";
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: "Montserrat";
   font-weight: 600;
 }

@@ -53,7 +53,7 @@ export const items = [
   {
     id: 1,
     name: "All",
-    link: "all",
+    link: "",
     items: [],
   },
   {

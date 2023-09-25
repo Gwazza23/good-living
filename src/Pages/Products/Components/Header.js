@@ -5,7 +5,7 @@ import { items } from "../../../Util/Items";
 
 function Header() {
   const { category } = useParams();
-  let urlCategory = category || "all";
+  let urlCategory = category || "";
   const productCategory = items.find((item) => item.link === urlCategory);
   const [name, setName] = useState(productCategory.name);
 

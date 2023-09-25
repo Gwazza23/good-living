@@ -1,0 +1,34 @@
+footer {
+  height: 15vh;
+  background: var(--dark-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+footer li {
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 5px 12px;
+}
+footer a {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+footer li:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+  }
+footer img {
+  width: 30px;
+  margin: 0px 5px;
+}
