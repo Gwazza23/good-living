@@ -1,0 +1,46 @@
+.header-container {
+    width: 90vw;
+    margin: 0px auto;
+}
+
+.header-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 20px 0px 40px 0px;
+}
+.header-container ul {
+    width: fit-content;
+    margin: 0px auto;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.header-container li {
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    background-color: var(--primary-light);
+    min-width: 150px;
+    padding: 10px;
+    margin: 5px 5px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+.header-container li:hover {
+    background-color: var(--background);
+}
+
+@media only screen and (max-width: 1024px){
+    .header-container li {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    .header-container li{
+        min-width: 200px;
+        font-size: 0.7rem;
+    }
+}
