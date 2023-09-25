@@ -5,8 +5,10 @@ import { items } from "../../../Util/Items";
 
 function Header() {
   const { category } = useParams();
-  const productCategory = items.find((item) => item.link === category);
+  let urlCategory = category || "all";
+  const productCategory = items.find((item) => item.link === urlCategory);
   const [name, setName] = useState(productCategory.name);
+
   return (
     <>
       <div className="header-container">

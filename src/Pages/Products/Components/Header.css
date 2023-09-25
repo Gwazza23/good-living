@@ -54,4 +54,7 @@
         font-size: 1.9rem;
         height: 8vh;
     }
+    .header-container li {
+        min-width: 275px;
+    }
 }

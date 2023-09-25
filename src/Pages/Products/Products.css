@@ -1,5 +1,33 @@
 .products-container {
-    border: 1px solid black;
-    width: 85vw;
-    margin: 15px auto;
+  width: 90vw;
+  margin: 15px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+    flex: 1;
+  cursor: pointer;
+  border: 2px solid var(--dark-grey);
+  width: fit-content;
+  max-width: 250px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.product:hover {
+  border: 2px solid black;
+}
+.product img {
+  width: 170px;
+  height: 160px;
+  margin: 20px;
+}
+.product h4 {
+  font-weight: 600;
+  margin: 10px;
 }
