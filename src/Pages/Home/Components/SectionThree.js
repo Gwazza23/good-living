@@ -11,7 +11,7 @@ function SectionThree() {
             Explore our diverse collection of high-quality products for every
             need and preference
           </p>
-          <Link>Shop Now</Link>
+          <Link to={'/products/all'} >Shop Now</Link>
         </div>
       </div>
       <img loading="lazy" src="media/living-room.webp" alt="living room" />

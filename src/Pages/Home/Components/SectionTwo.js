@@ -38,6 +38,7 @@ function SectionTwo() {
                   className="item"
                   onMouseEnter={handleMoueEnter}
                   onMouseLeave={handleMouseLeave}
+                  key={item.id}
                 >
                   <img loading="lazy" src={item.src} alt={item.name} />
                   <h4>{item.name}</h4>

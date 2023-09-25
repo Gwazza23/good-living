@@ -19,6 +19,7 @@
   align-items: flex-end;
   background-position: center;
   background-size: cover;
+  text-decoration: none;
 }
 .section-area::before {
   content: "";

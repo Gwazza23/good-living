@@ -1,31 +1,59 @@
 export const popularItems = [
-  { name: "Premium Queen Bed", src: "media/products/bed2.webp", price: 999.99 },
   {
+    id: 1,
+    name: "Premium Queen Bed",
+    src: "media/products/bed2.webp",
+    price: 999.99,
+  },
+  {
+    id: 2,
     name: "Russell Hobbs Microwave",
     src: "media/products/microwave.webp",
     price: 89.99,
   },
-  { name: "Bedding Pack", src: "media/products/bedding.webp", price: 99.99 },
   {
+    id: 3,
+    name: "Bedding Pack",
+    src: "media/products/bedding.webp",
+    price: 99.99,
+  },
+  {
+    id: 4,
     name: "Coffee Table",
     src: "media/products/coffeeTable.webp",
     price: 199.99,
   },
-  { name: "Smart Fridge", src: "media/products/fridge1.webp", price: 899.99 },
-  { name: "Ganymede Lamp", src: "media/products/lamp2.webp", price: 79.95 },
   {
+    id: 5,
+    name: "Smart Fridge",
+    src: "media/products/fridge1.webp",
+    price: 899.99,
+  },
+  {
+    id: 6,
+    name: "Ganymede Lamp",
+    src: "media/products/lamp2.webp",
+    price: 79.95,
+  },
+  {
+    id: 7,
     name: "Outdoor Funiture Set",
     src: "media/products/outdoorFuniture.webp",
     price: 1499.99,
   },
-  { name: "Cozy Sofa", src: "media/products/sofa1.webp", price: 1299.99 },
+  {
+    id: 8,
+    name: "Cozy Sofa",
+    src: "media/products/sofa1.webp",
+    price: 1299.99,
+  },
 ];
 
 export const items = [
   {
     id: 1,
     name: "All",
-    link: "all"
+    link: "all",
   },
   {
     id: 2,

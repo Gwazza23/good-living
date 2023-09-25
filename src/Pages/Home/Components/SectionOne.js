@@ -1,26 +1,30 @@
 import "./SectionOne.css";
+import { Link } from "react-router-dom";
 
 function SectionOne() {
   return (
     <div className="section-one-container">
-      <div className="section-area a1">
+      <Link to={"/products/home-decor"} className="section-area a1">
         <p>Home Décor</p>
-      </div>
-      <div className="section-area a2">
+      </Link>
+      <Link to={"/products/kitchen-and-dining"} className="section-area a2">
         <p>Kitchen & Dining</p>
-      </div>
-      <div className="section-area a3">
+      </Link>
+      <Link to={"/products/bedroom-and-bathroom"} className="section-area a3">
         <p>Bedroom & Bathroom</p>
-      </div>
-      <div className="section-area a4">
+      </Link>
+      <Link to={"/products/outdoor-and-garden"} className="section-area a4">
         <p>Outdoor & Garden</p>
-      </div>
-      <div className="section-area a5">
+      </Link>
+      <Link to={"/products/appliances"} className="section-area a5">
         <p>Appliances</p>
-      </div>
-      <div className="section-area a6">
+      </Link>
+      <Link
+        to={"/products/cleaning-and-organization"}
+        className="section-area a6"
+      >
         <p>Cleaning & Organization</p>
-      </div>
+      </Link>
     </div>
   );
 }
