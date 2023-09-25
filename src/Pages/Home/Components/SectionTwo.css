@@ -3,22 +3,15 @@
   margin: 0px auto;
 }
 .section-two-container h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 .carousel {
-  border-left: 3px solid var(--dark-grey);
-  border-right: 3px solid var(--dark-grey);
   display: block;
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: auto-scroll 60s infinite linear;
+  overflow: scroll;
+  border-left: 0.5px solid var(--dark-grey);
+  border-right: 0.5px solid var(--dark-grey);
 }
 
 .carousel-row {
@@ -37,6 +30,12 @@
   width: 220px;
   height: 270px;
 }
+.item:nth-child(1) {
+  margin: 0px 5px 0px 0px;
+}
+.item:nth-child(8) {
+  margin: 0px 0px 0px 5px;
+}
 .item img {
   margin: 15px;
   width: 185px;
@@ -51,17 +50,4 @@
 .item p {
   width: 100%;
   text-align: center;
-}
-
-.item:hover .carousel-track {
-  animation-play-state:paused;
-}
-
-@keyframes auto-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
 }

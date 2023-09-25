@@ -14,7 +14,7 @@ function SectionThree() {
           <Link>Shop Now</Link>
         </div>
       </div>
-      <img loading="lazy" src="media/living-room.jpg" alt="living room" />
+      <img loading="lazy" src="media/living-room.webp" alt="living room" />
     </div>
   );
 }

@@ -47,28 +47,28 @@
 .a1 {
   height: 40vh;
   grid-area: a1;
-  background-image: url(../../../../public/media/furniture.jpg);
+  background-image: url(../../../../public/media/furniture.webp);
 }
 
 .a2 {
   grid-area: a2;
-  background-image: url(../../../../public/media/kitchen.jpg);
+  background-image: url(../../../../public/media/kitchen.webp);
 }
 .a3 {
   grid-area: a3;
-  background-image: url(../../../../public/media/bedroom.jpg);
+  background-image: url(../../../../public/media/bedroom.webp);
 }
 .a4 {
   grid-area: a4;
-  background-image: url(../../../../public/media/garden.jpg);
+  background-image: url(../../../../public/media/garden.webp);
 }
 .a5 {
   grid-area: a5;
-  background-image: url(../../../../public/media/appliance.jpg);
+  background-image: url(../../../../public/media/appliance.webp);
 }
 .a6 {
   grid-area: a6;
-  background-image: url(../../../../public/media/cleaning.jpg);
+  background-image: url(../../../../public/media/cleaning.webp);
 }
 
 @media only screen and (max-width: 1024px) {
