@@ -3,15 +3,20 @@
   margin: 0px auto;
 }
 .section-two-container h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
 .carousel {
   display: block;
-  overflow: scroll;
-  border-left: 0.5px solid var(--dark-grey);
-  border-right: 0.5px solid var(--dark-grey);
+  overflow: hidden;
+}
+
+.carousel--track {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: auto-scroll 60s infinite linear;
 }
 
 .carousel-row {
@@ -27,27 +32,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 220px;
-  height: 270px;
+  width: 250px;
+  height: 280px;
+  transition: all 0.2s ease;
 }
-.item:nth-child(1) {
-  margin: 0px 5px 0px 0px;
+.item:hover {
+  border: 3px solid black;
 }
-.item:nth-child(8) {
-  margin: 0px 0px 0px 5px;
-}
+
 .item img {
   margin: 15px;
-  width: 185px;
-  height: 175px;
+  width: 175px;
+  height: 155px;
   user-select: none;
 }
 .item h4 {
   width: 100%;
   text-align: center;
-  margin: 5px 0px;
+  margin: 8px 0px;
 }
 .item p {
   width: 100%;
   text-align: center;
+}
+
+@keyframes auto-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media only screen and (max-width:425px){
+  .section-two-container h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
 }
