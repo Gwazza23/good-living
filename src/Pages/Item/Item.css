@@ -1,3 +1,25 @@
-.item-container{
-    border: 1px solid red;
+.item-container {
+  border: 1px solid red;
+}
+.item-container h1 {
+  text-align: center;
+}
+.item-section {
+  display: flex;
+  width: 95vw;
+  margin: 0px auto;
+}
+
+.item-img-container {
+  width: 50%;
+  border: 1px solid blue;
+}
+.item-img-container img {
+    width: 380px;
+    height: 380px;
+}
+
+.item-info-container {
+  width: 50%;
+  border: 1px solid green;
 }

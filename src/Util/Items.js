@@ -31,7 +31,7 @@ export const popularItems = [
   },
   {
     id: 10,
-    name: "Ganymede Lamp",
+    name: "Stylish Lamp",
     src: "media/products/lamp2.webp",
     price: 79.95,
   },
@@ -39,7 +39,7 @@ export const popularItems = [
     id: 45,
     name: "Outdoor Furniture Set",
     src: "media/products/outdoorFurniture.webp",
-    price: 1299.99,
+    price: 399.99,
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const items = [
       },
       {
         id: 4,
-        name: "Marble Coffe Table",
+        name: "Glass Coffe Table",
         src: "/media/products/coffeeTable.webp",
         price: 149.99,
       },
@@ -117,7 +117,7 @@ export const items = [
       },
       {
         id: 10,
-        name: "Ganymede Lamp",
+        name: "Stylish Lamp",
         src: "/media/products/lamp2.webp",
         price: 79.95,
       },
@@ -326,7 +326,7 @@ export const items = [
       {
         id: 40,
         name: "Hangers Pack (5x)",
-        src: "/media/products/bedding.webp",
+        src: "/media/products/hangers.webp",
         price: 9.99,
       },
       {
@@ -349,22 +349,16 @@ export const items = [
         price: 4.99,
       },
       {
-        id: 43,
-        name: "Double Garden Pot",
-        src: "/media/products/gardenPot2.webp",
-        price: 8.99,
-      },
-      {
         id: 44,
-        name: "Outdoor Sofa",
-        src: "/media/products/outdoorSofa.webp",
+        name: "Outdoor Premium Furniture Set",
+        src: "/media/products/outdoorFurniture2.webp",
         price: 899.99,
       },
       {
         id: 45,
         name: "Outdoor Furniture Set",
-        src: "/media/products/outdoorFurniture.webp",
-        price: 1299.99,
+        src: "/media/products/outdoorFurniture1.webp",
+        price: 399.99,
       },
       {
         id: 46,

@@ -16,7 +16,17 @@ function Item() {
 
   const item = All.items.find((item) => item.id.toString() === id);
 
-  return <div className="item-container">Item</div>;
+  return (
+    <div className="item-container">
+      <h1>{item.name}</h1>
+      <div className="item-section" >
+        <div className="item-img-container">
+          <img src={item.src} alt={item.name} />
+        </div>
+        <div className="item-info-container"></div>
+      </div>
+    </div>
+  );
 }
 
 export default Item;
