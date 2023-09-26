@@ -18,7 +18,7 @@ function Header() {
             return (
               <Link
                 onClick={() => setName(category.name)}
-                to={`/products/${category.link}`}
+                to={`/categories/${category.link}`}
                 key={category.id}
               >
                 <li>{category.name}</li>

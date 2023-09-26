@@ -32,3 +32,10 @@ h3 {
   font-family: "Montserrat";
   font-weight: 600;
 }
+
+/* This makes sure that the footer will always be positioned at the bottom of the page */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

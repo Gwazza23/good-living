@@ -4,11 +4,11 @@ import Footer from "../Pages/Footer/Footer";
 
 function Layout({ children }) {
   return (
-    <>
+    <div className="wrapper" >
       <Nav />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }
 

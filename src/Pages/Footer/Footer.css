@@ -1,5 +1,6 @@
 footer {
-  height: 15vh;
+  margin-top: auto;
+  min-height: 15vh;
   background: var(--dark-grey);
   display: flex;
   align-items: center;
@@ -25,9 +26,9 @@ footer a {
   text-decoration: none;
 }
 footer li:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--primary);
-  }
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
 footer img {
   width: 30px;
   margin: 0px 5px;

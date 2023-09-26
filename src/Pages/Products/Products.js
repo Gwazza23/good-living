@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import "./Products.css";
 import { items } from "../../Util/Items";
+import { Link } from "react-router-dom";
 
 function Products() {
   const { category } = useParams();
@@ -10,11 +11,11 @@ function Products() {
     <div className="products-container">
       {products.items.map((item) => {
         return (
-          <div className="product" key={item.id}>
+          <Link to={`/product/${item.id}`} className="product" key={item.id}>
             <img loading="lazy" src={item.src} alt={item.name} />
             <h4>{item.name}</h4>
             <p>£{item.price}</p>
-          </div>
+          </Link>
         );
       })}
     </div>

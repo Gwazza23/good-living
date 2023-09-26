@@ -11,6 +11,7 @@ import Products from "./Pages/Products/Products";
 import AllItem from "./Pages/Products/Components/AllItem";
 import Layout from "./Util/Layout";
 import { useEffect } from "react";
+import Item from "./Pages/Item/Item";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,10 +28,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/products" element={<Header />}>
-            <Route path="/products/:category" element={<Products />} />
+          <Route path="/categories" element={<Header />}>
+            <Route path="/categories/:category" element={<Products />} />
             <Route index element={<AllItem />} />
           </Route>
+          <Route path="/product/:id" element={<Item />} />
         </Route>
       </Routes>
     </Router>
