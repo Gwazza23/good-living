@@ -22,7 +22,8 @@ h4,
 a,
 p,
 button,
-li {
+li,
+h5 {
   font-family: "Roboto";
 }
 

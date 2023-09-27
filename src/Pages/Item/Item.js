@@ -1,8 +1,10 @@
 import "./Item.css";
 import { useParams } from "react-router-dom";
 import { items } from "../../Util/Items";
+import { useEffect, useState } from "react";
 
 function Item() {
+  let [quantity, setQuantity] = useState(1);
   const { id } = useParams();
 
   const All = items.find((item) => item.name === "All");
@@ -16,14 +18,45 @@ function Item() {
 
   const item = All.items.find((item) => item.id.toString() === id);
 
+  function handleDecrease() {
+    if (quantity === 0) {
+      return;
+    }
+    setQuantity((prevQuantity) => prevQuantity - 1);
+  }
+  function handleIncrease() {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  }
+
+  let [price, setPrice] = useState(item.price);
+
+  useEffect(() => {
+    setPrice(item.price * quantity)
+  },[item.price, quantity])
+
   return (
     <div className="item-container">
-      <h1>{item.name}</h1>
-      <div className="item-section" >
+      <div className="item-section">
         <div className="item-img-container">
           <img src={item.src} alt={item.name} />
         </div>
-        <div className="item-info-container"></div>
+        <div className="item-info-container">
+          <div className="item-info-wrapper" >
+          <h2>{item.name}</h2>
+          <h5>{item.desc}</h5>
+          <div className="quantity-section">
+            <h3 >Quantity</h3>
+            <div className="quantity-buttons">
+              <button onClick={handleDecrease}>-</button>
+              <p>{quantity}</p>
+              <button onClick={handleIncrease}>+</button>
+            </div>
+            <h3 id="price" >£{price.toFixed(2)}</h3>
+          </div>
+          <button id="buy-button" >Add To Cart</button>
+          </div>
+          
+        </div>
       </div>
     </div>
   );

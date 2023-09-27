@@ -1,8 +1,8 @@
 import React from "react";
 import { items } from "../../../Util/Items";
+import { Link } from "react-router-dom";
 
 function AllItem() {
-    
   //Grab the All Items object in the Items array
   const All = items.find((item) => item.name === "All");
 
@@ -21,11 +21,11 @@ function AllItem() {
     <div className="products-container">
       {All.items.map((item) => {
         return (
-          <div className="product" key={item.id}>
+          <Link to={`/product/${item.id}`} className="product" key={item.id}>
             <img loading="lazy" src={item.src} alt={item.name} />
             <h4>{item.name}</h4>
             <p>£{item.price}</p>
-          </div>
+          </Link>
         );
       })}
     </div>

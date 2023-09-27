@@ -1,25 +1,171 @@
 .item-container {
-  border: 1px solid red;
-}
-.item-container h1 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto auto;
 }
 .item-section {
   display: flex;
   width: 95vw;
-  margin: 0px auto;
+  min-height: 40vh;
+  border: 5px solid var(--primary-light);
 }
 
 .item-img-container {
   width: 50%;
-  border: 1px solid blue;
+  border: 10px solid var(--background-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 .item-img-container img {
-    width: 380px;
-    height: 380px;
+  width: 380px;
+  height: 380px;
 }
 
 .item-info-container {
+  padding: 10px;
   width: 50%;
-  border: 1px solid green;
+  background-color: var(--background-dark);
+}
+.item-info-wrapper {
+  border: 5px solid var(--dark-grey);
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item-info-wrapper h2 {
+  font-size: 2.2rem;
+  margin-top: 20px;
+  margin-bottom: auto;
+  text-align: center;
+}
+.item-info-wrapper h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 10px 40px;
+}
+.quantity-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.quantity-buttons {
+  display: flex;
+}
+.quantity-buttons button,
+.quantity-buttons p {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+}
+.quantity-buttons button {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border: 2px solid black;
+}
+.quantity-buttons p {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.quantity-section h3 {
+  font-size: 1.7rem;
+  margin: 0px 10px;
+}
+
+#price {
+  width: 10vw;
+  text-align: center;
+}
+
+#buy-button {
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  margin: 0px auto;
+  padding: 15px;
+  border: 2px solid black;
+  background-color: var(--primary);
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .item-img-container img {
+    width: 350px;
+    height: 350px;
+  }
+  .item-section h3 {
+    font-size: 1.2rem;
+  }
+  .quantity-buttons p,
+  .quantity-buttons button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .item-info-wrapper h5 {
+    margin: auto;
+    font-size: 0.9rem;
+  }
+  .item-info-wrapper h2 {
+    font-size: 2rem;
+  }
+  .item-img-container img {
+    width: 180px;
+    height: 180px;
+  }
+  .quantity-buttons p,
+  .quantity-buttons button {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+  }
+  .item-section h3 {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 523px) {
+  .item-section {
+    flex-direction: column;
+  }
+  .item-img-container {
+    width: 100%;
+  }
+  .item-info-container {
+    width: 100%;
+  }
+  .item-info-wrapper h2 {
+    font-size: 1.6rem;
+  }
+  .item-info-wrapper h5 {
+    font-size: 0.85rem;
+    margin: 10px auto;
+  }
+  .item-section h3 {
+    font-size: 1rem;
+  }
+  #price {
+    width: 30%;
+  }
+
+  .item-section h3{
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+    .item-section h3 {
+        font-size: 0.9rem;
+    }
 }
