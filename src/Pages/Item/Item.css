@@ -45,7 +45,7 @@
 .item-info-wrapper h5 {
   font-size: 1.1rem;
   font-weight: 400;
-  margin: 10px 40px;
+  margin: auto 40px;
 }
 .quantity-section {
   display: flex;
@@ -114,7 +114,7 @@
 
 @media only screen and (max-width: 768px) {
   .item-info-wrapper h5 {
-    margin: auto;
+    margin: 10px;
     font-size: 0.9rem;
   }
   .item-info-wrapper h2 {
@@ -138,6 +138,7 @@
 @media only screen and (max-width: 523px) {
   .item-section {
     flex-direction: column;
+    margin-bottom: 20px;
   }
   .item-img-container {
     width: 100%;
@@ -158,14 +159,16 @@
   #price {
     width: 30%;
   }
-
-  .item-section h3{
+  #buy-button {
+    font-size: 10px;
+  }
+  .item-section h3 {
     margin: 0px;
   }
 }
 
-@media only screen and (max-width: 320px){
-    .item-section h3 {
-        font-size: 0.9rem;
-    }
+@media only screen and (max-width: 320px) {
+  .item-section h3 {
+    font-size: 0.9rem;
+  }
 }
