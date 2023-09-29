@@ -111,9 +111,30 @@
   position: fixed;
   bottom: 0px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 0px 15px;
+}
+.cart-total-section1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+.cart-total a {
+  border: 2px solid black;
+  width: fit-content;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--background);
+  background: var(--primary);
+  padding: 10px;
+}
+#checkout-bag {
+  margin-left: 5px;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 768px) {

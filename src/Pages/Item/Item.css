@@ -1,4 +1,3 @@
-
 #go-back-button {
   margin: 10px 0px 30px 2.5vw;
   display: flex;
@@ -106,6 +105,11 @@
   border: 2px solid black;
   background-color: var(--primary);
   color: white;
+  transition: all 0.1s ease;
+}
+#buy-button.button-pressed {
+  background: white;
+  border: 2px solid green;
 }
 
 .pop-up {

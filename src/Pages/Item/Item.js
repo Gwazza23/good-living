@@ -50,7 +50,7 @@ function Item() {
   }
 
   function handleDecrease() {
-    if (quantity === 0) {
+    if (quantity === 1) {
       return;
     }
     setQuantity((prevQuantity) => prevQuantity - 1);
@@ -98,6 +98,8 @@ function Item() {
                   onClick={() => {
                     handleSubmit(item.id, item.price, item.name, item.src);
                   }}
+                  onMouseDown={(e) => e.target.classList.add("button-pressed")}
+                  onMouseUp={(e) => e.target.classList.remove("button-pressed")}
                 >
                   Add To Cart
                 </button>

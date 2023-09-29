@@ -1,7 +1,9 @@
 import "./Cart.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
+import { IoBagCheck } from 'react-icons/io5'
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   UpdateItemInCart,
   removeItemFromCart,
@@ -82,8 +84,11 @@ function Cart({ open, closeCart }) {
         </div>
       )}
       <div className="cart-total">
-        <h2>Cart Total:</h2>
-        <h2>£{total}</h2>
+        <div className="cart-total-section1">
+          <h2>Cart Total:</h2>
+          <h2>£{total.toFixed(2)}</h2>
+        </div>
+        <Link>Checkout<IoBagCheck id="checkout-bag"/></Link>
       </div>
     </div>
   );
