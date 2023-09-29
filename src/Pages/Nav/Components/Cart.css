@@ -3,6 +3,7 @@
   right: 0;
   width: 35%;
   height: 100dvh;
+  overflow: hidden;
   transition: all 0.4s ease;
   overflow-x: hidden;
   z-index: 10;
@@ -22,8 +23,9 @@
 .cart-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  align-items: center;
   padding: 0px 15px;
+  height: 10vh;
 }
 .cart-header h2 {
   text-transform: uppercase;
@@ -39,23 +41,23 @@
 }
 
 .no-items {
-  height: 100%;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
 }
 .cart-items-list {
-  border: 1px solid black;
-  margin-top: 10px;
-  height: 100%;
+  overflow-y: scroll;
+  height: 75vh;
 }
 
 .cart-item {
   cursor: default;
   background-color: var(--primary-light);
   color: var(--background);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  text-align: center;
   font-weight: 300;
   margin: 5px 2px;
   display: grid;
@@ -66,13 +68,13 @@
 }
 .cart-item img {
   padding: 10px;
-  grid-area: 1 / 1 / 2 / 2; 
+  grid-area: 1 / 1 / 2 / 2;
   width: 120px;
   height: 120px;
   background: var(--background-dark);
 }
 #cart-item-name {
-  grid-area: 1 / 2 / 2 / 3; 
+  grid-area: 1 / 2 / 2 / 3;
 }
 .cart-quantity {
   grid-area: 1 / 3 / 2 / 4;
@@ -88,8 +90,48 @@
 #cart-item-price {
   grid-area: 1 / 4 / 2 / 5;
 }
-.cart-item img, #cart-item-name, .cart-quantity , #cart-item-price {
+.cart-item img,
+#cart-item-name,
+.cart-quantity,
+#cart-item-price {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cart-total {
+  border-top: 5px dotted var(--background);
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cart-container {
+    min-width: 350px;
+  }
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+  }
+  .cart-item {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .cart-header h2 {
+    font-size: 1.3rem;
+  }
+  .cart-container {
+    min-width: 0px;
+    width: 100%;
+  }
+  .cart-total h2 {
+    font-size: 1.1rem;
+  }
 }
