@@ -10,7 +10,7 @@ nav {
   margin-left: 5vw;
 }
 .nav-logo-container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .nav-logo-container h1 {
   color: var(--dark-grey);
@@ -46,6 +46,25 @@ nav {
   background: none;
   font-size: 1rem;
   margin: 0px 0px 0px 10px;
+}
+
+.overlay {
+  border: 1px solid black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+  transition: opacity 0.3s ease, visiblity 0.3s ease;
+}
+.overlay.open {
+  background-color: rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  visibility: visible;
 }
 
 @media only screen and (max-width: 425px) {

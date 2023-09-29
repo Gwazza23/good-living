@@ -41,6 +41,7 @@
   margin-top: 20px;
   margin-bottom: auto;
   text-align: center;
+  text-transform: uppercase;
 }
 .item-info-wrapper h5 {
   font-size: 1.1rem;

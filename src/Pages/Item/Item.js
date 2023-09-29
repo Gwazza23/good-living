@@ -21,12 +21,14 @@ function Item() {
 
   const item = All.items.find((item) => item.id.toString() === id);
 
-  function handleSubmit(id, price) {
+  function handleSubmit(id, price, name, src) {
     dispatch(
       AddItemToCart({
         id: id,
         quantity: quantity,
         price: price,
+        name: name,
+        src: src,
       })
     );
   }
@@ -62,11 +64,16 @@ function Item() {
               <div className="quantity-buttons">
                 <button onClick={handleDecrease}>-</button>
                 <p>{quantity}</p>
-                <button onClick={ handleIncrease}>+</button>
+                <button onClick={handleIncrease}>+</button>
               </div>
               <h3 id="price">£{price.toFixed(2)}</h3>
             </div>
-            <button id="buy-button" onClick={() => {handleSubmit(item.id, item.price)}}>
+            <button
+              id="buy-button"
+              onClick={() => {
+                handleSubmit(item.id, item.price, item.name, item.src);
+              }}
+            >
               Add To Cart
             </button>
           </div>
