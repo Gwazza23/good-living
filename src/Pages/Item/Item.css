@@ -1,3 +1,12 @@
+
+#go-back-button {
+  margin: 10px 0px 30px 2.5vw;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
 .item-container {
   display: flex;
   justify-content: center;
@@ -8,6 +17,7 @@
   width: 95vw;
   min-height: 40vh;
   border: 5px solid var(--primary-light);
+  margin-bottom: 30px;
 }
 
 .item-img-container {
@@ -96,6 +106,28 @@
   border: 2px solid black;
   background-color: var(--primary);
   color: white;
+}
+
+.pop-up {
+  padding: 10px;
+  border: 0.5px solid black;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: white;
+  height: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25%;
+  font-size: 0.9rem;
+  transition: all 0.7s ease;
+}
+.pop-up.open {
+  top: 0px;
+}
+#pop-up-tick {
+  color: green;
+  margin-left: 2px;
 }
 
 @media only screen and (max-width: 1024px) {

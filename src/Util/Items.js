@@ -38,7 +38,7 @@ export const popularItems = [
   {
     id: 45,
     name: "Outdoor Furniture Set",
-    src: "media/products/outdoorFurniture.webp",
+    src: "media/products/outdoorFurniture1.webp",
     price: 399.99,
   },
   {

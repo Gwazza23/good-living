@@ -1,3 +1,9 @@
+.cart-header h2,
+.no-items,
+.cart-items,
+.cart-total {
+  cursor: default;
+}
 .cart-container {
   position: fixed;
   right: 0;
@@ -53,7 +59,6 @@
 }
 
 .cart-item {
-  cursor: default;
   background-color: var(--primary-light);
   color: var(--background);
   font-size: 1.1rem;

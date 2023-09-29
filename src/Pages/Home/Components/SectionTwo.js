@@ -1,9 +1,15 @@
 import "./SectionTwo.css";
 import { popularItems } from "../../../Util/Items";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SectionTwo() {
   const trackRef = useRef(null);
+  const navigate = useNavigate();
+
+  function navigateTo(id) {
+    navigate(`/product/${id}`);
+  }
 
   function handleMoueEnter() {
     if (trackRef.current) {
@@ -39,6 +45,9 @@ function SectionTwo() {
                   onMouseEnter={handleMoueEnter}
                   onMouseLeave={handleMouseLeave}
                   key={item.id}
+                  onClick={() => {
+                    navigateTo(item.id);
+                  }}
                 >
                   <img loading="lazy" src={item.src} alt={item.name} />
                   <h4>{item.name}</h4>
