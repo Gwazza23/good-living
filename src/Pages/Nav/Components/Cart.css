@@ -121,7 +121,8 @@
   justify-content: space-between;
   height: fit-content;
 }
-.cart-total a {
+.cart-total button {
+  cursor: pointer;
   border: 2px solid black;
   width: fit-content;
   margin-left: auto;

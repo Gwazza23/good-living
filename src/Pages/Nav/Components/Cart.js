@@ -1,9 +1,8 @@
 import "./Cart.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
-import { IoBagCheck } from 'react-icons/io5'
+import { IoBagCheck } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import {
   UpdateItemInCart,
   removeItemFromCart,
@@ -24,6 +23,33 @@ function Cart({ open, closeCart }) {
   }
 
   const total = totalCart();
+
+  function handleSubmit() {
+    if (cart.length === 0) {
+      return
+    }
+
+    fetch(`${process.env.REACT_APP_SERVER_URL}/create-checkout-session`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: cart,
+      }),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        console.log(url);
+        window.location = url;
+      })
+      .catch((e) => {
+        console.error(e.error);
+      });
+  }
 
   function handleIncrease(id, quantity) {
     let newQauntity = quantity + 1;
@@ -88,7 +114,10 @@ function Cart({ open, closeCart }) {
           <h2>Cart Total:</h2>
           <h2>£{total.toFixed(2)}</h2>
         </div>
-        <Link>Checkout<IoBagCheck id="checkout-bag"/></Link>
+        <button onClick={handleSubmit}>
+          Checkout
+          <IoBagCheck id="checkout-bag" />
+        </button>
       </div>
     </div>
   );

@@ -391,21 +391,21 @@ export const items = [
         desc: `Upgrade your garden with our Plastic Garden Pot! Crafted from durable, weather-resistant plastic, this stylish pot adds a touch of elegance to your outdoor space. Perfect for flowers, herbs, and more. Choose from various sizes and colors to suit your garden's aesthetic. Easy to maintain and long-lasting, it's a must-have for any green thumb!`
       },
       {
-        id: 44,
+        id: 43,
         name: "Outdoor Premium Furniture Set",
         src: "/media/products/outdoorFurniture2.webp",
         price: 899.99,
         desc: `Transform your outdoor space into a luxurious paradise with our Outdoor Premium Furniture Set. Crafted for both style and durability, this set combines contemporary design with weather-resistant materials, ensuring lasting beauty and comfort. Elevate your outdoor living today!`
       },
       {
-        id: 45,
+        id: 44,
         name: "Outdoor Furniture Set",
         src: "/media/products/outdoorFurniture1.webp",
         price: 399.99,
         desc: `Upgrade your outdoor oasis with our stylish Outdoor Furniture Set. Crafted for both comfort and durability, this set includes a spacious table and four cozy chairs. Enjoy al fresco dining and relaxation in your backyard paradise. Perfect for gatherings and quiet moments alike.`
       },
       {
-        id: 46,
+        id: 45,
         name: "Hanging Chair",
         src: "/media/products/hangingChair.webp",
         price: 139.99,
