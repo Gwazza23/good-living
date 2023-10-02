@@ -10,7 +10,7 @@ function Footer() {
         <li>Contact Us</li>
       </ul>
       <a target="_blank" rel="noreferrer" href="https://weerawarnagayanportfolio.netlify.app">
-        Designed by <img loading="lazy" src="/media/logo.webp" alt="logo" />
+        Designed by <img loading="lazy" src="./media/logo.webp" alt="logo" />
       </a>
     </footer>
   );
