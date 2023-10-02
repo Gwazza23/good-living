@@ -9,6 +9,7 @@ import {
   selectCart,
 } from "../../../Slices/CartSlice";
 import { useEffect } from "react";
+import axios from "axios";
 
 function Cart({ open, closeCart }) {
   const cart = useSelector(selectCart);
@@ -24,31 +25,27 @@ function Cart({ open, closeCart }) {
 
   const total = totalCart();
 
-  function handleSubmit() {
+  async function handleSubmit() {
     if (cart.length === 0) {
-      return
+      return;
     }
-
-    fetch(`${process.env.REACT_APP_SERVER_URL}/create-checkout-session`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        items: cart,
-      }),
-    })
-      .then((res) => {
-        if (res.ok) return res.json();
-        return res.json().then((json) => Promise.reject(json));
-      })
-      .then(({ url }) => {
-        console.log(url);
-        window.location = url;
-      })
-      .catch((e) => {
-        console.error(e.error);
-      });
+    try {
+      axios
+        .post(
+          `${process.env.REACT_APP_CLIENT_URL}/.netlify/functions/create-checkout-session`,
+          {
+            items: cart,
+          },
+          {
+            withCredentials: true,
+          }
+        )
+        .then((res) => {
+          window.location = res.data.url;
+        });
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 
   function handleIncrease(id, quantity) {
